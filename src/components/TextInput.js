@@ -1,7 +1,7 @@
 import { InputAdornment, TextField, IconButton } from "@mui/material";
-import {useState} from "react";
+import { useState } from "react";
 
-import { icons } from "../icons/icons";
+import { Icon } from "../icons/Icon";
 
 function TextInput({
    label,
@@ -16,8 +16,6 @@ function TextInput({
    ...props
 }) {
   const [showPassword, setShowPassword] = useState(passwordVisibility || false);
-  const IconComponent = icons[adornment];
-  const PasswordIcon = showPassword ? icons['visibilityOff'] : icons['visibility'];
 
   function togglePassword() {
     setShowPassword(!showPassword);
@@ -37,14 +35,14 @@ function TextInput({
         input: {
           startAdornment: (
             <InputAdornment position="start">
-              {adornment && <IconComponent />}
+              {adornment && <Icon name={adornment} />}
             </InputAdornment>
           ),
           endAdornment: (
             <InputAdornment position="end">
               {type === 'password' && showPasswordVisibilityToggle
                 && <IconButton onClick={togglePassword}>
-                  <PasswordIcon />
+                  <Icon name={showPassword ? 'visibilityOff' : 'visibility'} />
                 </IconButton>
               }
             </InputAdornment>

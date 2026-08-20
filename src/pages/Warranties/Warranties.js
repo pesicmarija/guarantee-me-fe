@@ -1,4 +1,5 @@
 import { Table } from "../../components/Table/Table";
+import {Navigation} from "../../components/Navigation";
 
 function Warranties() {
 
@@ -213,6 +214,7 @@ function Warranties() {
 
   return (
     <div style={{height: 500}}>
+      <Navigation />
       <Table
         rowData={warranties}
         columnDefs={colDefs}

@@ -1,5 +1,13 @@
+import { Box } from "@mui/material";
+
+import { Navigation } from "../../components/Navigation";
+
+
 function Dashboard() {
-  return <div>Dashboard Page</div>;
+  return <Box>
+    <Navigation />
+    <>Dashboard</>
+  </Box>;
 }
 
 export { Dashboard };

@@ -1,10 +1,10 @@
-import {Button} from "@mui/material";
-import {useRef} from 'react';
-import {Link} from "react-router";
+import { Button } from "@mui/material";
+import { useRef } from 'react';
+import { Link } from "react-router";
 import styled from "styled-components";
 
 import backgroundImg from '../../../assets/background.jpg';
-import {Form} from "../../components/Form/Form";
+import { Form } from "../../components/Form/Form";
 
 const Background = styled.div`
   background-image: url(${backgroundImg});
@@ -86,7 +86,7 @@ function Register() {
   };
 
   const uiSchema = {
-    firstName: { 'ui:placeholder': 'Enter your first name'},
+    firstName: { 'ui:placeholder': 'Enter your first name' },
     lastName: { 'ui:placeholder': 'Enter your last name' },
     username: { 'ui:placeholder': 'Choose a username' },
     email: { 'ui:placeholder': 'Enter your email address', 'ui:widget': 'email' },
@@ -105,10 +105,10 @@ function Register() {
     <Background>
       <FormWrapper>
         <Card>
-        <Title>Join GuaranteeMe</Title>
-        <FormContainer>
-          <Form ref={formRef} schema={schema} uiSchema={uiSchema} onSubmit={onSubmit}/>
-        </FormContainer>
+          <Title>Join GuaranteeMe</Title>
+          <FormContainer>
+            <Form ref={formRef} schema={schema} uiSchema={uiSchema} onSubmit={onSubmit}/>
+          </FormContainer>
           <Actions>
             <Button onClick={registerHandler} form="register-form" variant="contained">Create account</Button>
             <Link to="/login">Already have an account?</Link>
@@ -119,4 +119,4 @@ function Register() {
   );
 }
 
-export {Register};
+export { Register };

@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Route, Routes } from 'react-router';
 
+import { Layout } from "./components/Layout";
 import { Loader } from './components/Loader';
 import { AppErrorPage } from './pages/AppErrorPage';
 import { Login } from "./pages/Auth/Login";
@@ -15,8 +16,10 @@ const Root = () => {
       <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/warranties" element={<Warranties />} />
+        <Route element={<Layout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/warranties" element={<Warranties />} />
+        </Route>
         <Route
           path="*"
           element={

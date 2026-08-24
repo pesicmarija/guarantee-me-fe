@@ -1,11 +1,11 @@
-import {Button, Divider} from "@mui/material";
-import {useRef} from "react";
-import {Link} from "react-router";
+import { Button, Divider } from "@mui/material";
+import { useRef } from "react";
+import { Link } from "react-router";
 import styled from "styled-components";
 
 import backgroundImg from "../../../assets/login.jpg";
-import {Form} from "../../components/Form/Form";
-import {SocialMediaButton} from "../../components/SocialMediaButton";
+import { Form } from "../../components/Form/Form";
+import { SocialMediaButton } from "../../components/SocialMediaButton";
 
 const Background = styled.div`
   background-image: url(${backgroundImg});

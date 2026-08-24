@@ -11,22 +11,22 @@ const Container = styled.div`
   flex-direction: column;
 
   ${switchProp(prop('size'), {
-  s: css`
+    s: css`
       display: inline-flex;
       flex-direction: row;
       align-content: center;
     `,
-}, css`
+  }, css`
     display: inline-flex;
   `)};
 `;
 
 const Label = styled(Box)`
   ${switchProp(prop('size'), {
-  s: css`
+    s: css`
       margin: 0 0 0 10px;
     `,
-}, css`
+  }, css`
     margin: 10px 0 0 0;
   `)};
 `;

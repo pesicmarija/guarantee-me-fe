@@ -31,9 +31,10 @@ module.exports = defineConfig([
       },
     },
     rules: {
-      // your base asks
       semi: 'error',
       'prefer-const': 'error',
+      'object-curly-spacing': ['error', 'always'],
+      'indent': ['error', 2],
 
       // React 17+ JSX transform (no need to import React)
       'react/react-in-jsx-scope': 'off',

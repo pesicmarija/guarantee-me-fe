@@ -37,7 +37,7 @@ function ActionsCellRenderer({ actions }) {
           onClick={handleActionClick(onClick)}
           {...props}
         >
-         <Icon name={icon} />
+          <Icon name={icon} />
         </IconButton>))
       }
     </StyledActions>

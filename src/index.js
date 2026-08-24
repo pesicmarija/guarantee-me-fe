@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router";
 
-import {Root} from "./Root";
+import { Root } from "./Root";
 
 function App() {
   return (

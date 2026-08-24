@@ -1,4 +1,4 @@
-import {Button, Divider} from "@mui/material";
+import { Button, Divider } from "@mui/material";
 import styled from "styled-components";
 
 import logo from '../../assets/google-logo.png';

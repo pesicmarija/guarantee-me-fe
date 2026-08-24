@@ -1,16 +1,27 @@
-import  {Suspense} from "react";
+import { Outlet } from "react-router";
+import styled from "styled-components";
 
-import {Loader} from "./Loader";
+import { Navigation } from "./Navigation";
 
-function Layout({ children }) {
+const LayoutWrapper = styled.div`
+  display: flex;
+  min-height: 100vh;
+`;
+
+const Main = styled.main`
+  flex: 1;
+  min-width: 0;
+  padding: 32px;
+`;
+
+function Layout() {
   return (
-    <div>
-      {/* Layout content goes here */}
-      <h1>Layout Component</h1>
-      <Suspense fallback={<Loader />}>
-        {children}
-      </Suspense>
-    </div>
+    <LayoutWrapper>
+      <Navigation />
+      <Main>
+        <Outlet />
+      </Main>
+    </LayoutWrapper>
   );
 }
 

@@ -4,16 +4,16 @@ import { useState } from "react";
 import { Icon } from "../icons/Icon";
 
 function TextInput({
-   label,
-   value,
-   type,
-   onChange,
-   error,
-   helperText,
-   adornment,
-   showPasswordVisibilityToggle,
-   passwordVisibility,
-   ...props
+  label,
+  value,
+  type,
+  onChange,
+  error,
+  helperText,
+  adornment,
+  showPasswordVisibilityToggle,
+  passwordVisibility,
+  ...props
 }) {
   const [showPassword, setShowPassword] = useState(passwordVisibility || false);
 
